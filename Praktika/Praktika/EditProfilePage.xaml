@@ -1,0 +1,18 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Praktika.EditProfilePage"
+             Title="Редактировать профиль">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Редактировать профиль" FontSize="Large" HorizontalOptions="Center" />
+
+            <Entry Placeholder="Имя пользователя" Text="{Binding User.Username}" Margin="0,10,0,0" />
+            <Entry Placeholder="Пароль" IsPassword="True" Text="{Binding User.Password}" Margin="0,10,0,0" />
+            <Entry Placeholder="Имя" Text="{Binding User.FirstName}" Margin="0,10,0,0" />
+            <Entry Placeholder="Фамилия" Text="{Binding User.LastName}" Margin="0,10,0,0" />
+            <Entry Placeholder="Отчество" Text="{Binding User.MiddleName}" Margin="0,10,0,0" />
+
+            <Button Text="Сохранить изменения" Clicked="OnSaveClicked" HorizontalOptions="Center" Margin="0,20,0,0" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

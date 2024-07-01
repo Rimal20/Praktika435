@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Praktika.Models"
+             x:Class="Praktika.AddLessonPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Название занятия" />
+            <Entry x:Name="SubjectEntry" Placeholder="Введите название занятия" />
+
+            <Label Text="Дата и время, сроки выполнения до" />
+            <DatePicker x:Name="DatePicker" />
+            <TimePicker x:Name="TimePicker" />
+
+            <Label Text="ФИО учителя" />
+            <Entry x:Name="TeacherFioEntry" Placeholder="Введите ФИО учителя" />
+
+            <Label Text="Прогресс" />
+            <Entry x:Name="ProgressEntry" Placeholder="Введите прогресс" Keyboard="Numeric" />
+
+            <Button Text="Добавить занятие" Clicked="OnAddLessonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

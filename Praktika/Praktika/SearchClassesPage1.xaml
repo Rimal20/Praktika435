@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Praktika.SearchClassesPage1">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Поиск занятий" FontSize="Large" HorizontalOptions="Center" />
+
+            <Entry x:Name="TeacherFioEntry" Placeholder="Введите предмет" />
+            <Button Text="Искать" Clicked="OnSearchClicked" HorizontalOptions="Center" Margin="0,10,0,0" />
+            <Button Text="Сохранить в CSV" Clicked="OnSaveToCsvClicked" HorizontalOptions="Center" Margin="0,10,0,0"/>
+            <ListView x:Name="ResultsListView1" ItemsSource="{Binding SearchResults}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Subject}" FontAttributes="Bold" />
+                                <Label Text="{Binding Date}" />
+                                <Label Text="{Binding Progress, StringFormat='Прогресс: {0}%'}" />
+                                <Label Text="{Binding TeacherFio}" FontAttributes="Bold" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,6 @@
+@XamarinApi_HostAddress = http://localhost:5171
+
+GET {{XamarinApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
